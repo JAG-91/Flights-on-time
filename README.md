@@ -1,37 +1,139 @@
-Flights-on-time
+FlightOnTime – MVP de Predicción de Retrasos en Vuelos
 
-Prediccion de Retrasos en Vuelos – Proyecto de Analisis de Datos
+Hackathon de Data Science | Equipo de Ciencia de Datos
 
-Este proyecto implementa un flujo de trabajo optimizado para bajo consumo de RAM (< 3 GB) para predecir si un vuelo llegara con retraso, utilizando datos reales del sistema aereo de EE.UU. (2024). Esta disenado para ejecutarse en entornos limitados como Google Colab.
+---
 
-Caracteristicas principales:
-- Carga eficiente: lectura selectiva de columnas y tipos de datos ligeros (float32, int8, category).
-- Limpieza inteligente: filtrado de vuelos cancelados/desviados, creacion de variable objetivo binaria (retraso) y extraccion de hora de salida.
-- Encoding selectivo: One-Hot Encoding solo en variables de baja cardinalidad (aerolineas, estados) para evitar explosion dimensional.
-- Alta cardinalidad gestionada: variables como origin y dest se mantienen como tipo category (listas para target encoding avanzado si se requiere).
-- Ahorro extremo de RAM: uso de dtype='int8' en dummies, eliminacion inmediata de archivos temporales y liberacion explicita de memoria.
+Descripción del Proyecto
 
-Flujo del analisis:
-1. Autenticacion en Kaggle (subida flexible de kaggle.json desde Colab).
-2. Descarga y lectura directa desde ZIP sin descomprimir.
-3. Filtrado y transformacion con operaciones in-place.
-4. One-Hot Encoding selectivo (umbral configurable de cardinalidad).
-5. Reporte de uso de RAM y recomendacion de muestreo si es necesario.
+FlightOnTime es un modelo predictivo que estima la probabilidad de que un vuelo doméstico en Estados Unidos se retrase 15 minutos o más en su llegada, según el estándar oficial del Bureau of Transportation Statistics (BTS) del Departamento de Transporte de EE.UU.
 
-Variables clave utilizadas:
-- Categoricas (One-Hot): op_unique_carrier, origin_state_nm, dest_state_nm.
-- Alta cardinalidad (preservadas): origin, dest.
-- Numericas: distance, dep_delay, nas_delay, late_aircraft_delay, etc.
-- Temporal: hora_salida_programada (0–23).
-- Objetivo: retraso (1 si arr_delay > 0, 0 en caso contrario).
+El modelo está diseñado para ser integrado en una API REST que permita a aerolíneas, aeropuertos y pasajeros anticipar retrasos operativos y tomar decisiones proactivas.
 
-Proximos pasos recomendados:
-- Aplicar target encoding a origin y dest usando la tasa de retrasos por aeropuerto.
-- Dividir en train/test con estratificacion por retraso.
-- Entrenar modelos (Random Forest, XGBoost) con metricas como AUC, recall y F1.
+---
 
-Requisitos:
-- Entorno: Google Colab (o cualquier sistema con Python, pandas, kaggle).
-- Archivo kaggle.json de tu cuenta de Kaggle (disponible en kaggle.com/settings/account).
+Objetivo del MVP
 
-Ideal para cursos de machine learning, analisis de datos o proyectos con recursos limitados.
+Crear un modelo de clasificación binaria que, dado un conjunto de características de un vuelo antes de su salida, prediga si:
+- Puntual: llega con menos de 15 minutos de retraso.
+- Retrasado: llega con 15 minutos o más de retraso.
+
+El modelo se entrega como un archivo serializado (*.pkl) junto con metadatos para su uso en producción.
+
+---
+
+Resultados Clave
+
+Métrica          | Valor
+-----------------|------
+AUC-ROC          | 0.694
+AUC-PR           | 0.366
+F1-Score         | 0.415
+Recall           | 61.7%
+Precisión        | 31.8%
+
+Interpretación: El modelo identifica correctamente 6 de cada 10 vuelos retrasados reales (Recall = 61.7%). Sin embargo, de los vuelos que marca como "retrasados", solo 3 de cada 10 realmente lo están (Precisión = 31.8%). Esto es común en escenarios altamente desbalanceados (~20% de retrasos).  
+El modelo es útil para detección temprana (no perder vuelos retrasados).  
+Para reducir falsas alarmas, se puede elevar el umbral de decisión (ver sección de uso).        
+
+---
+
+ Dataset Utilizado
+
+- Nombre: US Domestic Flights 2024
+- Fuente: Kaggle - Flight Data 2024 (https://www.kaggle.com/datasets/hrishitpatil/flight-data-2024)
+- Periodo: Vuelos domésticos en EE.UU. durante el año 2024
+- Limpieza aplicada:
+  - Eliminación de vuelos cancelados o desviados.
+  - Definición de retraso: arr_delay >= 15 minutos.
+  - Eliminación de variables de fuga (ej.: dep_delay, carrier_delay).
+  - Reducción de uso de RAM mediante tipos optimizados (category, float32).
+
+---
+
+ Features Utilizadas (9)
+
+El modelo utiliza exclusivamente información disponible antes del despegue del vuelo:
+
+Feature   | Descripción     | Tipo
+------------------------|-------------------------------------------------|-----------
+op_unique_carrier       | Código de la aerolínea (ej.: "AA", "DL")        | Categórica
+origin                  | Aeropuerto de origen (ej.: "ATL", "JFK")        | Categórica
+dest                    | Aeropuerto de destino                           | Categórica
+origin_state_nm         | Estado de origen (ej.: "California", "Texas")   | Categórica
+dest_state_nm           | Estado de destino                               | Categórica
+distance                | Distancia del vuelo (km)                        | Numérica
+hora_salida_programada  | Hora programada de salida (0–23)                | Numérica
+dia_semana              | Día de la semana (0 = lunes, 6 = domingo)       | Numérica
+mes                     | Mes del año (1–12)                              | Numérica
+
+No se usan variables posteriores al vuelo (ej.: retrasos reales, causas), garantizando validez en producción.
+
+---
+
+Cómo Usar el Modelo
+
+1. Cargar el modelo y metadatos
+```python
+import joblib
+import json
+
+# Cargar modelo
+model = joblib.load("flight_delay_model_xgb.pkl")
+
+# Cargar metadatos
+with open("model_metadata.json", "r") as f:
+    metadata = json.load(f)
+```
+
+2. Preparar los datos de entrada
+El input debe ser un array o DataFrame con las 9 features en el orden exacto listado arriba.  
+Las variables categóricas deben codificarse con el mismo esquema usado en entrenamiento (ver notebook).
+
+3. Obtener predicción y probabilidad
+
+```python
+# Probabilidad de retraso (clase 1)
+prob_retraso = model.predict_proba(input_features)[0][1]
+
+# Umbral óptimo para F1-score (guardado en metadatos)
+umbral = metadata["umbral_optimo_f1"]  # Ej.: 0.327
+
+# Predicción final
+prevision = "Retrasado" if prob_retraso >= umbral else "Puntual"
+```
+
+4. Resultado esperado (para API)
+{
+  "prevision": "Retrasado",
+  "probabilidad": 0.78
+}
+
+---
+
+Mejoras Futuras
+
+1. Agregar features de congestión histórica por aeropuerto (ej.: % de retrasos promedio en origen/destino).
+2. Incorporar datos meteorológicos en tiempo real (vía API externa).
+3. Ajustar el umbral dinámicamente según el usuario:
+   - Pasajeros: umbral alto → mayor precisión.
+   - Aerolíneas: umbral bajo → mayor recall.
+4. Probar modelos más avanzados (LightGBM, CatBoost) o ensamblados.
+
+---
+
+Referencias
+
+- U.S. Department of Transportation (DOT). Air Travel Consumer Report.  
+  https://www.transportation.gov/airconsumer
+- Bureau of Transportation Statistics (BTS). On-Time Performance Data.  
+  https://www.transtats.bts.gov/ONTIME/
+- Kaggle Dataset: Flight Data 2024 by Hrishit Patil.  
+  https://www.kaggle.com/datasets/hrishitpatil/flight-data-2024
+
+---
+
+## Contacto
+
+Equipo de Ciencia de Datos – Hackathon FlightOnTime  
+Modelo entrenado el: 2025-06-15
