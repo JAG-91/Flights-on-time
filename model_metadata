@@ -1,0 +1,27 @@
+{
+    "modelo": "XGBoostClassifier",
+    "version": "1.0",
+    "fecha_entrenamiento": "2026-01-08 00:31:45",
+    "target_definicion": "retraso = (arr_delay >= 15 minutos)",
+    "umbral_optimo_f1": 0.5171917676925659,
+    "features_usadas": [
+        "hora_salida_programada",
+        "temporada_alta",
+        "op_unique_carrier",
+        "mes",
+        "dia_semana",
+        "hora_pico",
+        "origin",
+        "dest"
+    ],
+    "clases": [
+        "Puntual",
+        "Retrasado"
+    ],
+    "metricas_test": {
+        "AUC": 0.6963058743264372,
+        "F1": 0.4282006591028291,
+        "Recall": 0.6010689839479991,
+        "Precision": 0.33255682620358606
+    }
+}
