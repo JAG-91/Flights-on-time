@@ -1,1080 +1,1080 @@
 [
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-01",
         "total_vuelos":16972,
         "total_retrasos":3673
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-02",
         "total_vuelos":15656,
         "total_retrasos":1535
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-03",
         "total_vuelos":17062,
         "total_retrasos":1993
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-04",
         "total_vuelos":16964,
         "total_retrasos":2038
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-05",
         "total_vuelos":16310,
         "total_retrasos":2486
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-06",
         "total_vuelos":16692,
         "total_retrasos":3073
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-07",
         "total_vuelos":17257,
         "total_retrasos":4460
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-08",
         "total_vuelos":17102,
         "total_retrasos":3226
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-09",
         "total_vuelos":15868,
         "total_retrasos":1464
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-10",
         "total_vuelos":16841,
         "total_retrasos":1277
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-11",
         "total_vuelos":16019,
         "total_retrasos":1494
     },
     {
-        "op_unique_carrier":"9E",
+        "op_unique_carrier":1,
         "periodo":"2024-12",
         "total_vuelos":17351,
         "total_retrasos":3266
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-01",
         "total_vuelos":77346,
         "total_retrasos":21696
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-02",
         "total_vuelos":74870,
         "total_retrasos":13426
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-03",
         "total_vuelos":82259,
         "total_retrasos":21372
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-04",
         "total_vuelos":81216,
         "total_retrasos":18801
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-05",
         "total_vuelos":86765,
         "total_retrasos":30038
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-06",
         "total_vuelos":85581,
         "total_retrasos":26161
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-07",
         "total_vuelos":88291,
         "total_retrasos":31900
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-08",
         "total_vuelos":85963,
         "total_retrasos":25215
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-09",
         "total_vuelos":80709,
         "total_retrasos":14942
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-10",
         "total_vuelos":86812,
         "total_retrasos":13052
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-11",
         "total_vuelos":76757,
         "total_retrasos":12045
     },
     {
-        "op_unique_carrier":"AA",
+        "op_unique_carrier":2,
         "periodo":"2024-12",
         "total_vuelos":77737,
         "total_retrasos":16854
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-01",
         "total_vuelos":17775,
         "total_retrasos":3882
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-02",
         "total_vuelos":16863,
         "total_retrasos":2724
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-03",
         "total_vuelos":19639,
         "total_retrasos":4104
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-04",
         "total_vuelos":19430,
         "total_retrasos":3862
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-05",
         "total_vuelos":21257,
         "total_retrasos":4885
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-06",
         "total_vuelos":22166,
         "total_retrasos":5350
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-07",
         "total_vuelos":23884,
         "total_retrasos":5881
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-08",
         "total_vuelos":23265,
         "total_retrasos":5530
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-09",
         "total_vuelos":21548,
         "total_retrasos":4134
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-10",
         "total_vuelos":20503,
         "total_retrasos":3277
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-11",
         "total_vuelos":19462,
         "total_retrasos":3114
     },
     {
-        "op_unique_carrier":"AS",
+        "op_unique_carrier":3,
         "periodo":"2024-12",
         "total_vuelos":20027,
         "total_retrasos":4143
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-01",
         "total_vuelos":19580,
         "total_retrasos":5405
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-02",
         "total_vuelos":19235,
         "total_retrasos":4519
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-03",
         "total_vuelos":21565,
         "total_retrasos":6304
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-04",
         "total_vuelos":20124,
         "total_retrasos":4286
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-05",
         "total_vuelos":21246,
         "total_retrasos":5114
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-06",
         "total_vuelos":19903,
         "total_retrasos":5293
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-07",
         "total_vuelos":20182,
         "total_retrasos":6020
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-08",
         "total_vuelos":20498,
         "total_retrasos":6894
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-09",
         "total_vuelos":18350,
         "total_retrasos":3160
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-10",
         "total_vuelos":19694,
         "total_retrasos":2610
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-11",
         "total_vuelos":19134,
         "total_retrasos":2897
     },
     {
-        "op_unique_carrier":"B6",
+        "op_unique_carrier":4,
         "periodo":"2024-12",
         "total_vuelos":20771,
         "total_retrasos":6135
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-01",
         "total_vuelos":74384,
         "total_retrasos":13438
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-02",
         "total_vuelos":71218,
         "total_retrasos":7635
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-03",
         "total_vuelos":82668,
         "total_retrasos":13037
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-04",
         "total_vuelos":82832,
         "total_retrasos":12424
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-05",
         "total_vuelos":88381,
         "total_retrasos":18092
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-06",
         "total_vuelos":89065,
         "total_retrasos":17015
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-07",
         "total_vuelos":92296,
         "total_retrasos":25106
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-08",
         "total_vuelos":90397,
         "total_retrasos":16660
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-09",
         "total_vuelos":84545,
         "total_retrasos":10417
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-10",
         "total_vuelos":88300,
         "total_retrasos":8037
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-11",
         "total_vuelos":81825,
         "total_retrasos":8805
     },
     {
-        "op_unique_carrier":"DL",
+        "op_unique_carrier":5,
         "periodo":"2024-12",
         "total_vuelos":83283,
         "total_retrasos":15751
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-01",
         "total_vuelos":14379,
         "total_retrasos":3720
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-02",
         "total_vuelos":14157,
         "total_retrasos":2718
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-03",
         "total_vuelos":17324,
         "total_retrasos":5230
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-04",
         "total_vuelos":17081,
         "total_retrasos":4862
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-05",
         "total_vuelos":18647,
         "total_retrasos":6118
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-06",
         "total_vuelos":18646,
         "total_retrasos":6374
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-07",
         "total_vuelos":19432,
         "total_retrasos":6370
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-08",
         "total_vuelos":18812,
         "total_retrasos":5762
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-09",
         "total_vuelos":17491,
         "total_retrasos":3990
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-10",
         "total_vuelos":17801,
         "total_retrasos":4061
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-11",
         "total_vuelos":17559,
         "total_retrasos":3781
     },
     {
-        "op_unique_carrier":"F9",
+        "op_unique_carrier":6,
         "periodo":"2024-12",
         "total_vuelos":17294,
         "total_retrasos":4062
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-01",
         "total_vuelos":8596,
         "total_retrasos":1816
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-02",
         "total_vuelos":8486,
         "total_retrasos":1450
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-03",
         "total_vuelos":11031,
         "total_retrasos":2510
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-04",
         "total_vuelos":9271,
         "total_retrasos":1218
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-05",
         "total_vuelos":9567,
         "total_retrasos":1918
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-06",
         "total_vuelos":12229,
         "total_retrasos":2982
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-07",
         "total_vuelos":12861,
         "total_retrasos":3576
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-08",
         "total_vuelos":9244,
         "total_retrasos":2209
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-09",
         "total_vuelos":6889,
         "total_retrasos":1109
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-10",
         "total_vuelos":9195,
         "total_retrasos":1254
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-11",
         "total_vuelos":8757,
         "total_retrasos":1323
     },
     {
-        "op_unique_carrier":"G4",
+        "op_unique_carrier":7,
         "periodo":"2024-12",
         "total_vuelos":11084,
         "total_retrasos":2841
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-01",
         "total_vuelos":6576,
         "total_retrasos":1658
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-02",
         "total_vuelos":6067,
         "total_retrasos":1072
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-03",
         "total_vuelos":6455,
         "total_retrasos":726
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-04",
         "total_vuelos":6375,
         "total_retrasos":881
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-05",
         "total_vuelos":6652,
         "total_retrasos":1284
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-06",
         "total_vuelos":6597,
         "total_retrasos":972
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-07",
         "total_vuelos":6820,
         "total_retrasos":950
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-08",
         "total_vuelos":6829,
         "total_retrasos":745
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-09",
         "total_vuelos":6450,
         "total_retrasos":600
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-10",
         "total_vuelos":6583,
         "total_retrasos":786
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-11",
         "total_vuelos":6427,
         "total_retrasos":628
     },
     {
-        "op_unique_carrier":"HA",
+        "op_unique_carrier":8,
         "periodo":"2024-12",
         "total_vuelos":6699,
         "total_retrasos":991
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-01",
         "total_vuelos":20750,
         "total_retrasos":5283
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-02",
         "total_vuelos":20117,
         "total_retrasos":2330
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-03",
         "total_vuelos":22725,
         "total_retrasos":4226
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-04",
         "total_vuelos":23148,
         "total_retrasos":4213
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-05",
         "total_vuelos":24488,
         "total_retrasos":7621
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-06",
         "total_vuelos":25111,
         "total_retrasos":6795
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-07",
         "total_vuelos":26111,
         "total_retrasos":7232
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-08",
         "total_vuelos":25925,
         "total_retrasos":4953
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-09",
         "total_vuelos":23598,
         "total_retrasos":3446
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-10",
         "total_vuelos":23564,
         "total_retrasos":2387
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-11",
         "total_vuelos":21834,
         "total_retrasos":2705
     },
     {
-        "op_unique_carrier":"MQ",
+        "op_unique_carrier":9,
         "periodo":"2024-12",
         "total_vuelos":22584,
         "total_retrasos":4298
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-01",
         "total_vuelos":20415,
         "total_retrasos":5118
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-02",
         "total_vuelos":19928,
         "total_retrasos":4103
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-03",
         "total_vuelos":22885,
         "total_retrasos":6330
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-04",
         "total_vuelos":21998,
         "total_retrasos":3703
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-05",
         "total_vuelos":23298,
         "total_retrasos":6055
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-06",
         "total_vuelos":23437,
         "total_retrasos":6029
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-07",
         "total_vuelos":24769,
         "total_retrasos":8142
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-08",
         "total_vuelos":24676,
         "total_retrasos":6876
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-09",
         "total_vuelos":20399,
         "total_retrasos":3387
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-10",
         "total_vuelos":21176,
         "total_retrasos":2974
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-11",
         "total_vuelos":19459,
         "total_retrasos":2668
     },
     {
-        "op_unique_carrier":"NK",
+        "op_unique_carrier":10,
         "periodo":"2024-12",
         "total_vuelos":18662,
         "total_retrasos":4028
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-01",
         "total_vuelos":16526,
         "total_retrasos":3834
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-02",
         "total_vuelos":15655,
         "total_retrasos":2035
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-03",
         "total_vuelos":17364,
         "total_retrasos":2745
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-04",
         "total_vuelos":18611,
         "total_retrasos":3848
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-05",
         "total_vuelos":18822,
         "total_retrasos":5170
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-06",
         "total_vuelos":18526,
         "total_retrasos":3239
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-07",
         "total_vuelos":20078,
         "total_retrasos":6381
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-08",
         "total_vuelos":20730,
         "total_retrasos":4861
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-09",
         "total_vuelos":19944,
         "total_retrasos":4001
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-10",
         "total_vuelos":21146,
         "total_retrasos":3059
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-11",
         "total_vuelos":19666,
         "total_retrasos":2509
     },
     {
-        "op_unique_carrier":"OH",
+        "op_unique_carrier":11,
         "periodo":"2024-12",
         "total_vuelos":20903,
         "total_retrasos":5499
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-01",
         "total_vuelos":56814,
         "total_retrasos":12744
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-02",
         "total_vuelos":53325,
         "total_retrasos":8492
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-03",
         "total_vuelos":56241,
         "total_retrasos":8837
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-04",
         "total_vuelos":59669,
         "total_retrasos":9312
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-05",
         "total_vuelos":62107,
         "total_retrasos":12250
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-06",
         "total_vuelos":61853,
         "total_retrasos":13323
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-07",
         "total_vuelos":63914,
         "total_retrasos":13208
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-08",
         "total_vuelos":65390,
         "total_retrasos":12781
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-09",
         "total_vuelos":64633,
         "total_retrasos":9549
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-10",
         "total_vuelos":69069,
         "total_retrasos":9558
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-11",
         "total_vuelos":65042,
         "total_retrasos":11316
     },
     {
-        "op_unique_carrier":"OO",
+        "op_unique_carrier":12,
         "periodo":"2024-12",
         "total_vuelos":66601,
         "total_retrasos":13876
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-01",
         "total_vuelos":58855,
         "total_retrasos":11321
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-02",
         "total_vuelos":56834,
         "total_retrasos":8738
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-03",
         "total_vuelos":64929,
         "total_retrasos":11675
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-04",
         "total_vuelos":61044,
         "total_retrasos":11209
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-05",
         "total_vuelos":64156,
         "total_retrasos":16210
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-06",
         "total_vuelos":63005,
         "total_retrasos":14570
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-07",
         "total_vuelos":65463,
         "total_retrasos":17590
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-08",
         "total_vuelos":65939,
         "total_retrasos":14423
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-09",
         "total_vuelos":64212,
         "total_retrasos":8084
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-10",
         "total_vuelos":68403,
         "total_retrasos":7639
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-11",
         "total_vuelos":63581,
         "total_retrasos":10510
     },
     {
-        "op_unique_carrier":"UA",
+        "op_unique_carrier":13,
         "periodo":"2024-12",
         "total_vuelos":64030,
         "total_retrasos":11492
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-01",
         "total_vuelos":115389,
         "total_retrasos":25311
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-02",
         "total_vuelos":105207,
         "total_retrasos":16432
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-03",
         "total_vuelos":125272,
         "total_retrasos":26991
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-04",
         "total_vuelos":120579,
         "total_retrasos":22726
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-05",
         "total_vuelos":122496,
         "total_retrasos":32810
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-06",
         "total_vuelos":123817,
         "total_retrasos":30620
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-07",
         "total_vuelos":127642,
         "total_retrasos":35003
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-08",
         "total_vuelos":118338,
         "total_retrasos":22924
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-09",
         "total_vuelos":112561,
         "total_retrasos":15454
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-10",
         "total_vuelos":119251,
         "total_retrasos":14930
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-11",
         "total_vuelos":112591,
         "total_retrasos":13662
     },
     {
-        "op_unique_carrier":"WN",
+        "op_unique_carrier":14,
         "periodo":"2024-12",
         "total_vuelos":116276,
         "total_retrasos":21660
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-01",
         "total_vuelos":22914,
         "total_retrasos":3609
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-02",
         "total_vuelos":21602,
         "total_retrasos":1580
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-03",
         "total_vuelos":24348,
         "total_retrasos":2018
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-04",
         "total_vuelos":23863,
         "total_retrasos":2758
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-05",
         "total_vuelos":25551,
         "total_retrasos":3786
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-06",
         "total_vuelos":24504,
         "total_retrasos":3691
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-07",
         "total_vuelos":25613,
         "total_retrasos":5424
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-08",
         "total_vuelos":25916,
         "total_retrasos":4673
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-09",
         "total_vuelos":25425,
         "total_retrasos":2445
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-10",
         "total_vuelos":27159,
         "total_retrasos":2084
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-11",
         "total_vuelos":27291,
         "total_retrasos":3234
     },
     {
-        "op_unique_carrier":"YX",
+        "op_unique_carrier":15,
         "periodo":"2024-12",
         "total_vuelos":27279,
         "total_retrasos":4799
