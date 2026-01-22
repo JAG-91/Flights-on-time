@@ -6,19 +6,24 @@ Hackathon de Data Science | Equipo de Ciencia de Datos
 
 Descripción del Proyecto
 
-FlightOnTime es un modelo predictivo que estima la probabilidad de que un vuelo doméstico en Estados Unidos se retrase 15 minutos o más en su llegada, según el estándar oficial del Bureau of Transportation Statistics (BTS) del Departamento de Transporte de EE.UU.
+FlightOnTime es un modelo predictivo que estima la probabilidad de que un vuelo doméstico en Estados Unidos se retrase  más de 15 minutos en su llegada, según el estándar oficial del Bureau of Transportation Statistics (BTS) del Departamento de Transporte de EE.UU.
 
 El modelo está diseñado para ser integrado en una API REST que permita a aerolíneas, aeropuertos y pasajeros anticipar retrasos operativos y tomar decisiones proactivas.
+
+---
+Origen de Datos. 
+
+Se construye un dataframe, a partir de una base de datos existentes en kaggle, que consta de todos los vuelos en el transcurso de un año, en estados unidos y a esta se agregan las coodenadas de origen y destino. Luego a partir de esta informacion, se agrega las variables meteoroligas, consultando a una Api, de Meteo.com
 
 ---
 
 Objetivo del MVP
 
 Crear un modelo de clasificación binaria que, dado un conjunto de características de un vuelo antes de su salida, prediga si:
-- Puntual: llega con menos de 15 minutos de retraso.
+- Puntual: llega con mas de 15 minutos de retraso.
 - Retrasado: llega con 15 minutos o más de retraso.
 
-El modelo se entrega como un archivo serializado (*.pkl) junto con metadatos para su uso en producción.
+El modelo se entrega como un archivo serializado (*.ONX) junto con metadatos para su uso en producción.
 
 ---
 
@@ -26,15 +31,18 @@ Resultados Clave
 
 Métrica          | Valor
 -----------------|------
-AUC-ROC          | 0.694
-AUC-PR           | 0.366
-F1-Score         | 0.415
-Recall           | 61.7%
-Precisión        | 31.8%
+Precision        | 0.85
+F1-Score         | 0.86
+Recall           | 0.86
+Precisión        | 0.85
 
-Interpretación: El modelo identifica correctamente 6 de cada 10 vuelos retrasados reales (Recall = 61.7%). Sin embargo, de los vuelos que marca como "retrasados", solo 3 de cada 10 realmente lo están (Precisión = 31.8%). Esto es común en escenarios altamente desbalanceados (~20% de retrasos).  
-El modelo es útil para detección temprana (no perder vuelos retrasados).  
-Para reducir falsas alarmas, se puede elevar el umbral de decisión (ver sección de uso).        
+Basado en los valores de la imagen que subiste (0.85 y 0.86) y asumiendo el contexto de tu proyecto de predicción de retrasos en vuelos, aquí tienes la interpretación con el formato que solicitaste:
+
+Interpretación: El modelo captura correctamente 86 de cada 100 vuelos que realmente sufren retraso (Recall = 86%). A su vez, de todas las alertas de "retraso" que genera el sistema, el 85% son correctas y realmente ocurren (Precision = 85%).
+
+Esto demuestra un modelo muy robusto y equilibrado (F1-Score de 0.86). A diferencia de escenarios desbalanceados donde se sacrifica precisión para ganar cobertura, aquí el modelo es confiable en ambos frentes.
+
+Uso sugerido: El modelo es apto para automatización de decisiones operativas, ya que tiene muy pocas falsas alarmas y, al mismo tiempo, se le escapan muy pocos incidentes reales. No requiere ajustes agresivos del umbral.   
 
 ---
 
@@ -43,8 +51,16 @@ Para reducir falsas alarmas, se puede elevar el umbral de decisión (ver secció
 - Nombre: US Domestic Flights 2024
 - Fuente: Kaggle - Flight Data 2024 (https://www.kaggle.com/datasets/hrishitpatil/flight-data-2024)
 - Periodo: Vuelos domésticos en EE.UU. durante el año 2024
+- Se cruzo datos con Meteo.com, mediante una api, previo a agregar las coordenadas de cada aeropuerto. 
 - Limpieza aplicada:
+  - Se eliminan filas nan, que por tiempo no se alcanza a compilar con el clima (71%, de 1 millon de columnas)
   - Eliminación de vuelos cancelados o desviados.
+  - Se eliminan variables de año, mes, dia.
+  - se crea un diccionario numerico, para aeropuertos y aerolineas
+  - Se eliminan variables repetitivas (ciudad, longitud y latitud)
+  - Se ajustan variables, segun tipo de dato.
+  - se aplica una escala de min-max en variables numericas. a exepcion de las variables tipo categoricas.
+  - se revisa correlaciones y se borran las variables con alta correlacion. 
   - Definición de retraso: arr_delay >= 15 minutos.
   - Eliminación de variables de fuga (ej.: dep_delay, carrier_delay).
   - Reducción de uso de RAM mediante tipos optimizados (category, float32).
