@@ -76,23 +76,22 @@ Uso sugerido: El modelo es apto para automatización de decisiones operativas, y
 
 El modelo utiliza exclusivamente información disponible antes del despegue del vuelo:
 
-#   Column             Non-Null Count   Dtype  
----  ------             --------------   -----  
- 0   day_of_week        322069 non-null  float64
- 1   op_unique_carrier  322069 non-null  object 
- 2   op_carrier_fl_num  322069 non-null  float64
- 3   origin             322069 non-null  object 
- 4   dest               322069 non-null  object 
- 5   crs_dep_time       322069 non-null  float64
- 6   crs_arr_time       322069 non-null  float64
- 7   distance           322069 non-null  float64
- 8   temp_max           322069 non-null  float64
- 9   rain_sum           322069 non-null  float64
- 10  snow_sum           322069 non-null  float64
- 11  wind_speed         322069 non-null  float64
- 12  weather_code       322069 non-null  float64
- 13  arr_delay_binary   322069 non-null  int64
----
+| # | Column | Non-Null Count | Dtype |
+| :--- | :--- | :--- | :--- |
+| 0 | `day_of_week` | 322,069 non-null | float64 |
+| 1 | `op_unique_carrier` | 322,069 non-null | object |
+| 2 | `op_carrier_fl_num` | 322,069 non-null | float64 |
+| 3 | `origin` | 322,069 non-null | object |
+| 4 | `dest` | 322,069 non-null | object |
+| 5 | `crs_dep_time` | 322,069 non-null | float64 |
+| 6 | `crs_arr_time` | 322,069 non-null | float64 |
+| 7 | `distance` | 322,069 non-null | float64 |
+| 8 | `temp_max` | 322,069 non-null | float64 |
+| 9 | `rain_sum` | 322,069 non-null | float64 |
+| 10 | `snow_sum` | 322,069 non-null | float64 |
+| 11 | `wind_speed` | 322,069 non-null | float64 |
+| 12 | `weather_code` | 322,069 non-null | float64 |
+| 13 | `arr_delay_binary` | 322,069 non-null | int64 |
 
 Cómo Usar el Modelo
 
@@ -157,15 +156,19 @@ Modelo escogido
 * **F1-Score:** 0.87 (Balance general)
 * **Accuracy:** 87.3% (Acierto global)
   
- "top_variables_importantes": 
-        "temp_max": 0.123,
-        "weather_code": 0.120,
-        "day_of_week": 0.117,
-        "wind_speed": 0.111,
-        "crs_dep_time": 0.0965,
-        "crs_arr_time": 0.094,
-        "op_carrier_fl_num": 0.059,
-        "distance": 0.0429,
+
+El modelo identificó que los factores climáticos son los determinantes más fuertes para predecir retrasos.
+
+| Variable | Peso (0-1) | Impacto Visual |
+| :--- | :---: | :--- |
+| **temp_max** | 0.1230 | ████████████▎ |
+| **weather_code** | 0.1200 | ████████████ |
+| **day_of_week** | 0.1170 | ███████████▋ |
+| **wind_speed** | 0.1110 | ███████████ |
+| **crs_dep_time** | 0.0965 | █████████▋ |
+| **crs_arr_time** | 0.0940 | █████████▍ |
+| **op_carrier_fl_num**| 0.0590 | █████▉ |
+| **distance** | 0.0429 | ████▎ |
  
         
 ----
@@ -173,10 +176,10 @@ Modelo escogido
 
 Mejoras Futuras
 
-3. Ajustar el umbral dinámicamente según el usuario:
-   - Pasajeros: umbral alto → mayor precisión.
-   - Aerolíneas: umbral bajo → mayor recall.
-4. Probar modelos más avanzados (LightGBM, CatBoost) o ensamblados.
+1. pasar los modelos a un servidor
+2. complementar con datos de vuelos internacionales
+3. agregar aeropuertos, fuera de USA 
+
 
 ---
 
