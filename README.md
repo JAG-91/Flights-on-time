@@ -59,11 +59,16 @@ Uso sugerido: El modelo es apto para automatización de decisiones operativas, y
   - se crea un diccionario numerico, para aeropuertos y aerolineas
   - Se eliminan variables repetitivas (ciudad, longitud y latitud)
   - Se ajustan variables, segun tipo de dato.
-  - se aplica una escala de min-max en variables numericas. a exepcion de las variables tipo categoricas.
+  - se deja las variables op_unique_carrier, origin y dest como variables categoricas
   - se revisa correlaciones y se borran las variables con alta correlacion. 
   - Definición de retraso: arr_delay >= 15 minutos.
+  - se transforma la variable arr delay a binaria. 
   - Eliminación de variables de fuga (ej.: dep_delay, carrier_delay).
   - Reducción de uso de RAM mediante tipos optimizados (category, float32).
+  - Se aplica un one-hot encoding
+  - se aplica una escala de min-max en variables numericas. a exepcion de las variables 
+  - Se aplica smoote, para tener la misma cantidad de vualos a tiempo, como vuelos retrasados.
+ 
 
 ---
 
@@ -71,35 +76,44 @@ Uso sugerido: El modelo es apto para automatización de decisiones operativas, y
 
 El modelo utiliza exclusivamente información disponible antes del despegue del vuelo:
 
-Feature   | Descripción     | Tipo
-------------------------|-------------------------------------------------|-----------
-op_unique_carrier       | Código de la aerolínea (ej.: "AA", "DL")        | Categórica
-origin                  | Aeropuerto de origen (ej.: "ATL", "JFK")        | Categórica
-dest                    | Aeropuerto de destino                           | Categórica
-origin_state_nm         | Estado de origen (ej.: "California", "Texas")   | Categórica
-dest_state_nm           | Estado de destino                               | Categórica
-distance                | Distancia del vuelo (km)                        | Numérica
-hora_salida_programada  | Hora programada de salida (0–23)                | Numérica
-dia_semana              | Día de la semana (0 = lunes, 6 = domingo)       | Numérica
-mes                     | Mes del año (1–12)                              | Numérica
-
-No se usan variables posteriores al vuelo (ej.: retrasos reales, causas), garantizando validez en producción.
-
+#   Column             Non-Null Count   Dtype  
+---  ------             --------------   -----  
+ 0   day_of_week        322069 non-null  float64
+ 1   op_unique_carrier  322069 non-null  object 
+ 2   op_carrier_fl_num  322069 non-null  float64
+ 3   origin             322069 non-null  object 
+ 4   dest               322069 non-null  object 
+ 5   crs_dep_time       322069 non-null  float64
+ 6   crs_arr_time       322069 non-null  float64
+ 7   distance           322069 non-null  float64
+ 8   temp_max           322069 non-null  float64
+ 9   rain_sum           322069 non-null  float64
+ 10  snow_sum           322069 non-null  float64
+ 11  wind_speed         322069 non-null  float64
+ 12  weather_code       322069 non-null  float64
+ 13  arr_delay_binary   322069 non-null  int64
 ---
 
 Cómo Usar el Modelo
 
 1. Cargar el modelo y metadatos
 ```python
-import joblib
-import json
+# 1. Montar Drive (si no está montado)
+drive.mount('/content/drive')
 
-# Cargar modelo
-model = joblib.load("flight_delay_model_xgb.pkl")
+ruta_drive = "/content/drive/MyDrive/Dataset_Vuelos/ultima_prueba.json"
 
-# Cargar metadatos
-with open("model_metadata.json", "r") as f:
-    metadata = json.load(f)
+# Cargar el JSON
+with open(ruta_drive, 'r') as f:
+    data_json = json.load(f)
+
+# 2. Usar json_normalize
+df = pd.json_normalize(data_json)
+
+
+
+print("Dimensiones del DataFrame:", df.shape)
+df.head()
 ```
 
 2. Preparar los datos de entrada
@@ -119,18 +133,46 @@ umbral = metadata["umbral_optimo_f1"]  # Ej.: 0.327
 prevision = "Retrasado" if prob_retraso >= umbral else "Puntual"
 ```
 
-4. Resultado esperado (para API)
-{
-  "prevision": "Retrasado",
-  "probabilidad": 0.78
-}
 
 ---
+Modelo escogido 
+
+"nombre_modelo": "Random Forest Classifier",
+    "tecnica_balanceo": "SMOTE (50/50)",
+    "parametros": {
+        "n_estimators": 35,
+        "random_state": 108
+
+  ---
+**Resumen de Métricas Finales:**
+
+|                    | **Predicción: No Retraso** | **Predicción: Retraso** |
+| :---               | :---: | :---: |
+| **Realidad: No Retraso** | **45,700** (TN) | 5,364 (FP) |
+| **Realidad: Retraso** | 7,544 (FN) | **43,184** (TP) |
+
+**Métricas Derivadas:**
+* **Precision:** 89.0% (Calidad de la alerta)
+* **Recall:** 85.1% (Capacidad de detección)
+* **F1-Score:** 0.87 (Balance general)
+* **Accuracy:** 87.3% (Acierto global)
+  
+ "top_variables_importantes": 
+        "temp_max": 0.123,
+        "weather_code": 0.120,
+        "day_of_week": 0.117,
+        "wind_speed": 0.111,
+        "crs_dep_time": 0.0965,
+        "crs_arr_time": 0.094,
+        "op_carrier_fl_num": 0.059,
+        "distance": 0.0429,
+ 
+        
+----
+
 
 Mejoras Futuras
 
-1. Agregar features de congestión histórica por aeropuerto (ej.: % de retrasos promedio en origen/destino).
-2. Incorporar datos meteorológicos en tiempo real (vía API externa).
 3. Ajustar el umbral dinámicamente según el usuario:
    - Pasajeros: umbral alto → mayor precisión.
    - Aerolíneas: umbral bajo → mayor recall.
@@ -146,10 +188,10 @@ Referencias
   https://www.transtats.bts.gov/ONTIME/
 - Kaggle Dataset: Flight Data 2024 by Hrishit Patil.  
   https://www.kaggle.com/datasets/hrishitpatil/flight-data-2024
-
+- https://api.open-meteo.com/v1/forecast?latitude=-33.393&longitude=-70.785&hourly=temperature_2m,dew_point_2m,precipitation,weather_code,visibility,wind_speed_10m,wind_direction_10m,wind_gusts_10m,freezing_level_height,cloud_cover_low,snow_depth,cape&wind_speed_unit=kn&timezone=auto&start_date=2026-01-08&end_date=2026-01-10
 ---
 
 ## Contacto
 
 Equipo de Ciencia de Datos – Hackathon FlightOnTime  
-Modelo entrenado el: 2025-06-15
+Modelo entrenado el: 22-01-2026
